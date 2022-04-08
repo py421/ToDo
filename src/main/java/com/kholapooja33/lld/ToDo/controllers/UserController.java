@@ -1,13 +1,14 @@
 package com.kholapooja33.lld.ToDo.controllers;
 
-import com.kholapooja33.lld.ToDo.exceptions.UserAlreadyExistsException;
+import com.kholapooja33.lld.ToDo.dao.UserDAOService;
+import com.kholapooja33.lld.ToDo.entities.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.*;
 
 @RestController
 public class UserController {
     //private final Set<String> names = new HashSet<>();
+    @Autowired
     private UserDAOService userDaoService;
 
     @PostMapping("/register")
@@ -15,9 +16,9 @@ public class UserController {
         userDaoService.save(user);
     }
 
-    @GetMapping("/profile/{id}")
-    public User findUserById(@PathVariable String id){
-        return userDaoService.findById(id);
+    @GetMapping("/profile/{username}")
+    public User findUserByUserName(@PathVariable String username){
+        return userDaoService.findByUserName(username);
     }
 
 //    @GetMapping("/get")

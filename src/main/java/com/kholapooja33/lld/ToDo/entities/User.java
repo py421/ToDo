@@ -1,12 +1,12 @@
-package com.kholapooja33.lld.ToDo.controllers;
+package com.kholapooja33.lld.ToDo.entities;
 
 
 public class User {
     private String userName;
     private String email;
-    private Integer phoneNo;
+    private String phoneNo;
 
-    public User(String userName, String email, Integer phoneNo) {
+    public User(String userName, String email, String phoneNo) {
         this.userName = userName;
         this.email = email;
         this.phoneNo = phoneNo;
@@ -24,11 +24,11 @@ public class User {
         this.email = email;
     }
 
-    public Integer getPhoneNo() {
+    public String getPhoneNo() {
         return phoneNo;
     }
 
-    public void setPhoneNo(Integer phoneNo) {
+    public void setPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
     }
 
