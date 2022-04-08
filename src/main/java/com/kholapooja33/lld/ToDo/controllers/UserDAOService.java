@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.*;
 
-@RestController
-
+@Component
 public class UserDAOService {
     private Map<String,User> users = new HashMap<>();
     private Set<String> mails = new HashSet<>();
@@ -18,4 +17,12 @@ public class UserDAOService {
         users.add(user);
         return true;
     }
+    public User findById(String id){
+        for(User user : users)
+            if(user.getValue().getUserName()==id)
+                return user.getValue();
+        }
+        return null;
+    }
+
 }
