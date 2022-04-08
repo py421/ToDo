@@ -1,6 +1,6 @@
 package com.kholapooja33.lld.ToDo.exceptionMappers;
 
-import com.kholapooja33.lld.ToDo.UserAlreadyExistsException;
+import com.kholapooja33.lld.ToDo.exceptions.UserAlreadyExistsException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
